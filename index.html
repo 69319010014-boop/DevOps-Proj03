@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#f7f8f6">
+    <meta name="theme-color" content="#f5f9ff">
     <meta name="description" content="ช่างพร้อม บริการซ่อมมือถือและอุปกรณ์อิเล็กทรอนิกส์ ดูแลโดยช่างมืออาชีพ แจ้งอาการก่อนประเมินราคา">
     <title>ช่างพร้อม — ซ่อมดี ดูแลถึงใจ</title>
     <style>
         :root {
             color-scheme: light;
-            --ink: #17211f;
-            --muted: #64716d;
-            --green: #187b67;
-            --green-dark: #116452;
-            --lime: #d7edaa;
-            --paper: #f7f8f6;
-            --line: #e4e9e5;
+            --ink: #14243d;
+            --muted: #65758b;
+            --blue: #2674d9;
+            --blue-dark: #1552a0;
+            --sky: #dcefff;
+            --paper: #f5f9ff;
+            --line: #e3ebf5;
             --white: #fff;
             font-family: "Leelawadee UI", "Noto Sans Thai", Tahoma, sans-serif;
         }
@@ -27,13 +27,13 @@
         button, input, select, textarea { font: inherit; }
         .container { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
 
-        .header { padding: 17px 0; border-bottom: 1px solid var(--line); background: rgba(247, 248, 246, .94); }
+        .header { padding: 17px 0; border-bottom: 1px solid var(--line); background: rgba(245, 249, 255, .94); }
         .nav { display: flex; align-items: center; justify-content: space-between; gap: 25px; }
         .brand { display: inline-flex; align-items: center; gap: 10px; font-size: 19px; font-weight: 850; letter-spacing: -.5px; }
-        .brand-icon { display: grid; width: 39px; height: 39px; place-items: center; border-radius: 13px; background: var(--green); color: white; }
+        .brand-icon { display: grid; width: 39px; height: 39px; place-items: center; border-radius: 13px; background: var(--blue); color: white; }
         .brand-icon svg { width: 22px; height: 22px; }
-        .nav-links { display: flex; align-items: center; gap: 30px; color: #53605b; font-size: 13px; font-weight: 650; }
-        .nav-links a:hover { color: var(--green); }
+        .nav-links { display: flex; align-items: center; gap: 30px; color: #53647b; font-size: 13px; font-weight: 650; }
+        .nav-links a:hover { color: var(--blue); }
 
         .button {
             display: inline-flex;
@@ -44,46 +44,46 @@
             padding: 0 20px;
             border: 0;
             border-radius: 10px;
-            background: var(--green);
+            background: var(--blue);
             color: white;
             cursor: pointer;
             font-size: 14px;
             font-weight: 750;
             transition: background .2s ease, transform .2s ease;
         }
-        .button:hover { transform: translateY(-2px); background: var(--green-dark); }
+        .button:hover { transform: translateY(-2px); background: var(--blue-dark); }
         .button svg { width: 17px; height: 17px; }
-        .button-outline { border: 1px solid #d5dfd9; background: transparent; color: var(--ink); }
-        .button-outline:hover { background: white; color: var(--green-dark); }
+        .button-outline { border: 1px solid #d6e2f1; background: transparent; color: var(--ink); }
+        .button-outline:hover { background: white; color: var(--blue-dark); }
         .nav-button { min-height: 41px; padding-inline: 16px; font-size: 12px; }
 
         .hero { display: grid; grid-template-columns: 1fr .88fr; align-items: center; gap: 65px; padding-block: 74px 82px; }
-        .badge { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 19px; color: var(--green); font-size: 12px; font-weight: 800; }
-        .badge-dot { width: 8px; height: 8px; border-radius: 50%; background: #71b896; box-shadow: 0 0 0 4px #e2f1e8; }
+        .badge { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 19px; color: var(--blue); font-size: 12px; font-weight: 800; }
+        .badge-dot { width: 8px; height: 8px; border-radius: 50%; background: #58a9ed; box-shadow: 0 0 0 4px #e2f2ff; }
         h1, h2, h3, p { margin-top: 0; }
         h1 { max-width: 590px; margin-bottom: 18px; font-size: clamp(42px, 5.3vw, 66px); font-weight: 850; letter-spacing: -2.7px; line-height: 1.18; }
-        h1 span { color: var(--green); }
+        h1 span { color: var(--blue); }
         .hero-copy { max-width: 490px; margin-bottom: 26px; color: var(--muted); font-size: 15px; }
         .hero-actions { display: flex; flex-wrap: wrap; gap: 11px; }
-        .trust-row { display: flex; flex-wrap: wrap; gap: 19px; margin-top: 26px; color: #53605b; font-size: 11px; font-weight: 650; }
+        .trust-row { display: flex; flex-wrap: wrap; gap: 19px; margin-top: 26px; color: #53647b; font-size: 11px; font-weight: 650; }
         .trust-item { display: inline-flex; align-items: center; gap: 6px; }
-        .trust-item svg { width: 15px; height: 15px; color: var(--green); }
+        .trust-item svg { width: 15px; height: 15px; color: var(--blue); }
 
         .request-wrap { position: relative; }
-        .request-wrap::before { position: absolute; z-index: -1; top: -19px; right: -17px; width: 110px; height: 110px; border-radius: 25px; background: var(--lime); content: ""; transform: rotate(9deg); }
-        .request-card { padding: 27px; border: 1px solid var(--line); border-radius: 18px; background: white; box-shadow: 0 18px 55px rgba(27, 55, 45, .08); }
+        .request-wrap::before { position: absolute; z-index: -1; top: -19px; right: -17px; width: 110px; height: 110px; border-radius: 25px; background: var(--sky); content: ""; transform: rotate(9deg); }
+        .request-card { padding: 27px; border: 1px solid var(--line); border-radius: 18px; background: white; box-shadow: 0 18px 55px rgba(29, 66, 120, .08); }
         .form-heading { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
-        .form-icon { display: grid; width: 43px; height: 43px; flex: 0 0 auto; place-items: center; border-radius: 13px; background: #eaf4ed; color: var(--green); }
+        .form-icon { display: grid; width: 43px; height: 43px; flex: 0 0 auto; place-items: center; border-radius: 13px; background: #eaf4ff; color: var(--blue); }
         .form-icon svg { width: 22px; height: 22px; }
         .form-heading h2 { margin-bottom: 1px; font-size: 17px; }
         .form-heading p { margin-bottom: 0; color: var(--muted); font-size: 11px; }
         .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
         .field { display: grid; gap: 5px; }
         .field-full { grid-column: 1 / -1; }
-        .field label { color: #3e4b46; font-size: 11px; font-weight: 750; }
-        .field input, .field select, .field textarea { width: 100%; min-height: 42px; padding: 9px 11px; border: 1px solid #dfe6e1; border-radius: 8px; outline: none; background: #fff; color: var(--ink); font-size: 12px; }
+        .field label { color: #3e5069; font-size: 11px; font-weight: 750; }
+        .field input, .field select, .field textarea { width: 100%; min-height: 42px; padding: 9px 11px; border: 1px solid #dfe8f3; border-radius: 8px; outline: none; background: #fff; color: var(--ink); font-size: 12px; }
         .field textarea { min-height: 72px; resize: vertical; }
-        .field input:focus, .field select:focus, .field textarea:focus { border-color: #54a48b; box-shadow: 0 0 0 3px #e6f3ed; }
+        .field input:focus, .field select:focus, .field textarea:focus { border-color: #64a7eb; box-shadow: 0 0 0 3px #e6f3ff; }
         .request-card .button { width: 100%; margin-top: 13px; }
         .form-disclaimer { margin: 10px 0 0; color: #7a8580; font-size: 10px; text-align: center; }
         .form-status { display: none; margin: 11px 0 0; padding: 10px; border-radius: 8px; background: #fff7df; color: #74591a; font-size: 11px; }
@@ -92,51 +92,51 @@
         .proof { padding-block: 20px; border-block: 1px solid var(--line); background: white; }
         .proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); align-items: center; }
         .proof-item { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 7px; }
-        .proof-icon { display: grid; width: 38px; height: 38px; flex: 0 0 auto; place-items: center; border-radius: 12px; background: #f0f5f0; color: var(--green); }
+        .proof-icon { display: grid; width: 38px; height: 38px; flex: 0 0 auto; place-items: center; border-radius: 12px; background: #f0f6ff; color: var(--blue); }
         .proof-icon svg { width: 20px; height: 20px; }
         .proof-item strong { display: block; font-size: 12px; }
         .proof-item span { display: block; color: var(--muted); font-size: 10px; }
 
         .section { padding-block: 86px; }
         .section-head { max-width: 570px; margin-bottom: 30px; }
-        .section-kicker { margin-bottom: 7px; color: var(--green); font-size: 11px; font-weight: 850; letter-spacing: .7px; }
+        .section-kicker { margin-bottom: 7px; color: var(--blue); font-size: 11px; font-weight: 850; letter-spacing: .7px; }
         .section-head h2 { margin-bottom: 7px; font-size: clamp(28px, 3.6vw, 39px); letter-spacing: -1px; line-height: 1.3; }
         .section-head p { margin-bottom: 0; color: var(--muted); font-size: 13px; }
         .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
         .service-card { padding: 22px; border: 1px solid var(--line); border-radius: 15px; background: white; transition: transform .2s ease, box-shadow .2s ease; }
-        .service-card:hover { transform: translateY(-4px); box-shadow: 0 13px 30px rgba(27, 55, 45, .07); }
-        .service-icon { display: grid; width: 47px; height: 47px; margin-bottom: 17px; place-items: center; border-radius: 14px; background: #eaf4ed; color: var(--green); }
+        .service-card:hover { transform: translateY(-4px); box-shadow: 0 13px 30px rgba(29, 66, 120, .07); }
+        .service-icon { display: grid; width: 47px; height: 47px; margin-bottom: 17px; place-items: center; border-radius: 14px; background: #eaf4ff; color: var(--blue); }
         .service-icon svg { width: 24px; height: 24px; }
         .service-card h3 { margin-bottom: 5px; font-size: 16px; }
         .service-card p { margin-bottom: 0; color: var(--muted); font-size: 12px; }
 
-        .process { padding-block: 77px; background: #edf2ed; }
+        .process { padding-block: 77px; background: #edf5fd; }
         .process .section-head { margin-inline: auto; text-align: center; }
         .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 35px; }
         .step { position: relative; text-align: center; }
-        .step-number { display: grid; width: 49px; height: 49px; margin: 0 auto 13px; place-items: center; border-radius: 15px; background: var(--green); color: white; font-size: 15px; font-weight: 800; }
+        .step-number { display: grid; width: 49px; height: 49px; margin: 0 auto 13px; place-items: center; border-radius: 15px; background: var(--blue); color: white; font-size: 15px; font-weight: 800; }
         .step h3 { margin-bottom: 4px; font-size: 15px; }
         .step p { max-width: 270px; margin: 0 auto; color: var(--muted); font-size: 11px; }
 
         .why-grid { display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; gap: 60px; }
-        .why-visual { position: relative; display: grid; min-height: 310px; place-items: center; overflow: hidden; border-radius: 20px; background: #dcebe1; }
-        .why-visual::before, .why-visual::after { position: absolute; border: 1px solid rgba(24, 123, 103, .14); border-radius: 50%; content: ""; }
+        .why-visual { position: relative; display: grid; min-height: 310px; place-items: center; overflow: hidden; border-radius: 20px; background: #dceeff; }
+        .why-visual::before, .why-visual::after { position: absolute; border: 1px solid rgba(38, 116, 217, .14); border-radius: 50%; content: ""; }
         .why-visual::before { width: 230px; height: 230px; }
         .why-visual::after { width: 300px; height: 300px; }
-        .tool-illustration { position: relative; z-index: 1; width: 152px; color: var(--green); }
+        .tool-illustration { position: relative; z-index: 1; width: 152px; color: var(--blue); }
         .why-points { display: grid; gap: 15px; margin-top: 23px; }
         .why-point { display: flex; align-items: flex-start; gap: 11px; }
-        .check { display: grid; width: 23px; height: 23px; flex: 0 0 auto; margin-top: 2px; place-items: center; border-radius: 50%; background: #e4f2e7; color: var(--green); }
+        .check { display: grid; width: 23px; height: 23px; flex: 0 0 auto; margin-top: 2px; place-items: center; border-radius: 50%; background: #e4f0ff; color: var(--blue); }
         .check svg { width: 14px; height: 14px; }
         .why-point strong { display: block; margin-bottom: 1px; font-size: 12px; }
         .why-point span { display: block; color: var(--muted); font-size: 11px; }
 
         .cta { padding-block: 0 83px; }
-        .cta-box { display: flex; align-items: center; justify-content: space-between; gap: 25px; padding: 36px 40px; border-radius: 18px; background: #173a32; color: white; }
+        .cta-box { display: flex; align-items: center; justify-content: space-between; gap: 25px; padding: 36px 40px; border-radius: 18px; background: #122e56; color: white; }
         .cta-box h2 { margin-bottom: 5px; font-size: clamp(22px, 3vw, 30px); letter-spacing: -.6px; }
-        .cta-box p { margin-bottom: 0; color: #d0ddd7; font-size: 12px; }
-        .cta-box .button { flex: 0 0 auto; background: var(--lime); color: #1b392f; }
-        .cta-box .button:hover { background: #c4e48b; }
+        .cta-box p { margin-bottom: 0; color: #d0e0f2; font-size: 12px; }
+        .cta-box .button { flex: 0 0 auto; background: var(--sky); color: #123c76; }
+        .cta-box .button:hover { background: #c8e1ff; }
 
         footer { padding-block: 18px; border-top: 1px solid var(--line); }
         .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; color: var(--muted); font-size: 10px; }
@@ -321,8 +321,8 @@
             <div class="why-grid">
                 <div class="why-visual" aria-hidden="true">
                     <svg class="tool-illustration" viewBox="0 0 160 160" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M99 24a34 34 0 0 0-43 43l-36 36a16 16 0 0 0 23 23l36-36a34 34 0 0 0 43-43l-23 23-22-22 22-24Z" fill="#d7edaa" stroke="#187b67"></path>
-                        <circle cx="44" cy="116" r="7" fill="#187b67" stroke="none"></circle>
+                        <path d="M99 24a34 34 0 0 0-43 43l-36 36a16 16 0 0 0 23 23l36-36a34 34 0 0 0 43-43l-23 23-22-22 22-24Z" fill="#cfe6ff" stroke="#2674d9"></path>
+                        <circle cx="44" cy="116" r="7" fill="#2674d9" stroke="none"></circle>
                     </svg>
                 </div>
                 <div>
